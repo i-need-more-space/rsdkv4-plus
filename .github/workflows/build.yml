@@ -124,7 +124,7 @@ jobs:
         run: |
           Invoke-WebRequest -Uri "https://libsdl.org/release/SDL2-2.28.3.zip" -OutFile "SDL2.zip"
           Expand-Archive -Path SDL2.zip -DestinationPath ./dependencies/android/SDL/
-          Rename-Item ./dependencies/android/ SDL2-2.28.3 SDL
+          Rename-Item ./dependencies/android/SDL2-2.28.3 SDL
       - name: Move & Copy stuff
         run: |
           Copy-Item -Path ./dependencies/all/theoraplay -Destination ./dependencies/android/app/jni/src/dependencies/android/
